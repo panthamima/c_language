@@ -60,4 +60,5 @@ void insertion_sort(void** arr, size_t length, size_t ele_size, int (*comparator
 /* Searching Algorithms */
 int linear_search_vector(Vector*, void* param, int (*comparator)(const void*, const void*));
 
+
 #endif
