@@ -20,10 +20,10 @@ typedef struct Stack Stack;
 Stack* newStack(int);
 void init_stack(Stack*, int);
 
-void (*push)(Stack*, void *);
-void* (*pop)(Stack*);
-void (*display)(Stack*);
-void* (*peek)(Stack*);
-bool (*isEmpty)(Stack*);
+void push(Stack*, void *);
+void* pop(Stack*);
+void display(Stack*);
+void* peek(Stack*);
+bool isEmpty(Stack*);
 
 #endif
