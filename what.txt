@@ -1,0 +1,13 @@
+*(char**)
+char*
+*char
+char**
+struct
+union 
+typedef
+->
+malloc 
+realloc
+ifndef
+define
+void,int
