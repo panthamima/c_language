@@ -89,44 +89,45 @@ void create_sparse(int a[10][10], int row, int column, term c[])
         printf("%d\t%d\t%d\t", c[i].row, c[i].col, c[i].value);
     }
 }
+
 #include <stdio.h>
 #include <time.h>
-#include <unistd.h>
 #include <stdlib.h>
-
-struct {
-    int years;
-    int months;
-    int days;
-} tt;
-
+#include <Windows.h>
 
 
 int main(void)
 {
-    printf("");
-    while (1)
-    {   
+    while (1) {   
         time_t t = time(NULL);
         struct tm* aTm = localtime(&t);
         
+        system("cls");
         int year = aTm->tm_year-103;
         int months = aTm->tm_mon+1;
         int days = aTm->tm_yday+1;
         int hours = aTm->tm_hour+1;
         int minutes = aTm->tm_min+1;
         int seconds = aTm->tm_sec+1;
-        int buffer;
 
-        printf("прожито: %d лет\n", year);
-        printf("%d месяцев\n", 12 * year + months-3);
-        printf("%d дней\n", year * 365 + days-90);
-        printf("%ld часов\n", year* 365 * 24 + hours);
-        printf("%ld минут\n",buffer = year * 365 * 24 * 60 + minutes);
-        printf("%ld\n",(year * 365 * 24 * 60 * 60) + seconds);
+        printf("    Lived time: \n\n");
+        printf("years:       %d\n", year);
+        printf("months:      %d\n", 12 * year + months-3);
+        printf("days:        %d \n", year * 365 + days-90);
+        printf("hours:       %ld\n", year* 365 * 24 + hours);
+        printf("minutes:     %ld \n", year * 365 * 24 * 60 + minutes);
+        printf("seconds:     %ld\n",(year * 365 * 24 * 60 * 60 + 145) + seconds);
         printf("\n");
-        sleep(1);
+    
+        printf("31%% [*****##########] \n");
+        printf("Average lived time:\n\n");
+        printf("years:       %d\n", 62);
+        printf("months:      %d\n", 62 * 12);
+        printf("days:        %d\n", 62 * 365);
+        printf("hours:       %d\n", 62 * 365 * 24 + 23);
+        printf("minutes:     %d\n", 62 * 365 * 24 * 60 + 33);
+        printf("seconds:     %d\n", 62 * 365 * 24 * 60 * 60 + 178);
+        
+        Sleep(1000);
     }
-    return 0;
-    // (year * 365 * 24 * 60 * 60) (year * 365  * buffer) + seconds)
-}
+}    
